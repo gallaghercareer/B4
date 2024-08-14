@@ -1,0 +1,57 @@
+{
+	"name": "blaise",
+	"patterns": [
+		{
+			"include": "#comments"
+		}
+		,
+		
+		{
+			"include": "#strings"
+		}
+		,
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#variable"
+		}
+	],
+	"repository": {
+		"comments": {
+			"name":"comment.block.documentation",
+			"begin":"\\{",
+			"end":"\\}"
+		},
+		"keywords": {
+			"patterns": [
+				{
+ "name": "keyword.control.blaise",
+    "match":"(?i)\\b(for|to|do|enddo|datamodel|languages|attributes|dk|rf|primary|uses|parallel|type|nodk|norf|string|array|of|include|endmodel|block|endblock|embedded|layout|at|infopane|fields|locals|integer|procedure|parameters|import|alien|endprocedure|auxfields|datetype|empty|timetype|error|check|involving|reservecheck|grid|fieldpane|from|set|ord|cardinal|response|nonresponse|datamodel|endmodel|languages|attributes|primary|uses|parallel|type|block|endblock|procedure|endprocedure|while|auxfields|locals|rules|library|endlibrary|libraries|setlanguage|abs|round|str|len|systime|sysdate|ask|show|keep|insert|delete|cardinal|ord|exchange|layout|table|endtable|systemtype|aggregate|arctan|cos|div|exp|frac|int|ln|max|min|mod|module11|module11s|pi|pow|random|sin|sqr|sqrt|sum|trunc|char|envvar|fill|format|inputpath|len|lowercase|metasearchpath|numeric|numlayout|outputpath|position|replace|setupname|substring|username|val|classtostr|depth|history|resethistory|abstime|hour|minute|second|starttime|totime|timetostr|strtotime|age|datetostr|day|julian|month|startdate|strtodate|sysdate|todate|week|weekday|year|changed|checkrules|close|createform|daybatch_add|daybatch_del|daybatch_mod|daybatch_transfer|dayfile|dontknowcount|eof|erase|errorcount|fileexists|filename|formnumber|formstatus|get|initrecord|key|lastrecord|line|linenumber|metaversioninfo|outputlength|page|pathlength|pagenumber|printstring|read|readkey|readkeyname|readnext|readprev|recordcount|recordlength|recordnumber|refusalcount|remarkcount|reset|resultok|search|searchpartial|setoutputlength|setpagelength|setpagenumber|setreadkey|sortnumber|suppresscount|versioninfo|write|open|read|result|cadi|capi|cati|cawi|classify|dummy|newpage|call|cleardisplay|confirm|display|edit|editform|halt|help|menu|message|pause|ready|run|runresult|selectfile|selectfolder|datachangedbyuser|reservecheck|activelanguage|activefield|activeparallel|ditto|formcount|setactivelanguage|setactivefield|setactiveparallel|alternative|ascii|blaise|instructions|case|endcase|manipulate|case|settings|secondary|function|dialogbox|repeat|until|for|to|do|enddo|datamodel|languages|attributes|dk|rf|primary|uses|parallel|type|nodk|norf|string|array|of|include|endmodel|block|endblock|embedded|layout|at|infopane|fields|locals|integer|procedure|parameters|import|alien|endprocedure|auxfields|datetype|empty|timetype|error|check|involving|reservecheck|grid|fieldpane|from|set|ord|cardinal|response|nonresponse)\\b"
+				},
+				{"name":"keyword.operator.new",
+				"match": "<|>|<>|>=|<=|\\+|-|\\*\\*|\\*|\\/|=|:=|\\[|\\]"
+			   }
+				
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.single.blaise",
+					"match": "'[^']*'"
+				},
+				{
+					"name": "string.quoted.double.blaise",
+					"match":  "\"[^\"]*\""
+				}
+				
+			]
+		},
+		"variable": {
+			"name":"variable.language.blaise",
+			"match" : "(?i)AND|OR|NOT|IN|if|elseif|else|endif|then" 
+		}
+	},
+	"scopeName": "source.blaise"
+}

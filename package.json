@@ -1,0 +1,25 @@
+{
+  "name": "blaise",
+  "displayName": ".BLAISE",
+  "description": "blaise language support vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "blaise",
+      "aliases": ["blaise", "blaise"],
+      "extensions": [".bla",".man",".lib",".prc",".inc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "blaise",
+      "scopeName": "source.blaise",
+      "path": "./syntaxes/blaise.tmLanguage.json"
+    }]
+  }
+}
