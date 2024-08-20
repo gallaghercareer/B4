@@ -39,18 +39,59 @@
 			"patterns": [
 				{
 					"name": "string.quoted.single.blaise",
-					"match": "'[^']*'"
+					"begin": "'",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.blaise"
+						}
+					},
+					"end": "'",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.blaise"
+						}
+					},
+					"patterns": [
+						{
+							"name": "constant.character.escape.blaise",
+							"match": "'"
+						},
+						{
+							"name": "string.quoted.double.blaise",
+							"match": "\"[^\"]*\""
+						}
+					]
 				},
 				{
 					"name": "string.quoted.double.blaise",
-					"match":  "\"[^\"]*\""
+					"begin": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.blaise"
+						}
+					},
+					"end": "\"",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.blaise"
+						}
+					},
+					"patterns": [
+						{
+							"name": "constant.character.escape.blaise",
+							"match": "\\\\\""
+						},
+						{
+							"name": "string.quoted.single.blaise",
+							"match": "'[^']*'"
+						}
+					]
 				}
-				
 			]
 		},
 		"variable": {
-			"name":"variable.language.blaise",
-			"match" : "(?i)AND|OR|NOT|IN|if|elseif|else|endif|then" 
+			"name": "variable.language.blaise",
+			"match": "(?i)\\b(AND|OR|NOT|IN|if|elseif|else|endif|then)\\b"
 		}
 	},
 	"scopeName": "source.blaise"

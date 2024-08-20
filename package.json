@@ -3,6 +3,7 @@
   "displayName": ".BLAISE",
   "description": "blaise language support vscode",
   "version": "0.0.1",
+  "author": "John Gallagher",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -10,16 +11,56 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "blaise",
-      "aliases": ["blaise", "blaise"],
-      "extensions": [".bla",".man",".lib",".prc",".inc"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "blaise",
-      "scopeName": "source.blaise",
-      "path": "./syntaxes/blaise.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "blaise",
+        "aliases": ["blaise", "blaise"],
+        "extensions": [".bla", ".man", ".lib", ".prc", ".inc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "blaise",
+        "scopeName": "source.blaise",
+        "path": "./syntaxes/blaise.tmLanguage.json"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "workbench.action.tasks.runTask",
+        "key": "ctrl+w",
+        "args": "Compile Instrument",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "workbench.action.tasks.runTask",
+        "key": "ctrl+e",
+        "args": "Run Setup",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "workbench.action.tasks.runTask",
+        "key": "ctrl+r",
+        "args": "Run DEP",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configurationDefaults": {
+    
+      "files.encoding": "windows1252",
+      "terminal.integrated.defaultProfile.windows": "PowerShell",
+      "workbench.colorCustomizations": {
+        "editorError.foreground": "#ff0000"
+      },
+      "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+      },
+      "editor.suggestOnTriggerCharacters": false,
+      "editor.stickyScroll.enabled": false,
+      "diffEditor.ignoreTrimWhitespace": false
+    }
   }
 }

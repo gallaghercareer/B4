@@ -1,7 +1,7 @@
 # blaise README
+Creator: John Gallagher
 
-This is the README for your extension "blaise". After writing up a brief description, we recommend including the following sections.
-
+The scripts are in the ./script folder. Tasks.json will need to be setup via the setup.ps1 script.
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
