@@ -60,7 +60,38 @@
       },
       "editor.suggestOnTriggerCharacters": false,
       "editor.stickyScroll.enabled": false,
-      "diffEditor.ignoreTrimWhitespace": false
+      "diffEditor.ignoreTrimWhitespace": false,
+      "editor.tokenColorCustomizations" : {
+       
+        "[Visual Studio Light]": {
+ 
+                "comments" : "#0f3ee9",
+                "strings": "#ff2323",
+                "keywords": "#000000",
+                "textMateRules": [
+                        {
+                            "scope": "keyword",
+                            "settings": {
+                                "fontStyle": "bold"
+                            }
+                        },
+                        {"scope": "comment.block.documentation",
+                "settings": {
+ 
+                        "fontStyle": "italic"
+                }},
+                {"scope" : "constant.character.escape",
+        "settings": {
+                "foreground": "#277e0e"
+ 
+        }} 
+                ]
+ 
+        }
+        },
+"files.saveConflictResolution": "overwriteFileOnDisk"
+}
     }
   }
-}
+
+ 
